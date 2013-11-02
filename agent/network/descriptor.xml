@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<agent_info>
+        <!-- $[] for System.getProperty() entry -->
+        <!-- ${} for Internal envrionment variable -->
+
+		<!-- Default value of mode is "call" -->
+		<!-- Default value of version is "1.0" -->
+		<!-- Default value of type is "task" -->
+		<!-- type can be "task", "network", "query" -->
+
+		<!-- Query interpreter -->
+		<agent name="MyQuery" class="mage.lang.MyQuery"
+				mode="now" version="1.0" type="query" />
+		<agent name="HeartBeat" class="mage.lang.HeartBeat"
+				mode="now" version="1.0" type="query" />
+	
+		<!-- Network protocol -->
+		<agent name="LITH_Talk" class="mage.network.protocol.LITHTalk" 
+		       mode="call" version="1.0" type="network" />
+		<agent name="HTTP" class="mage.network.protocol.HTTP"
+				mode="call" version="1.0" type="network" />
+		<agent name="Multicast" class="mage.network.protocol.Multicast"
+				mode="call" version="1.0" type="network" />	
+		
+		<!-- Network Manager -->
+		<agent name="LITHTalk_Manager" class="mage.network.SocketManager"
+				mode="now" version="1.0" type="net_manager" >
+			<arg name="protocol" value="LITH_Talk" />
+			<arg name="PORT" value="9001" />
+		</agent>
+		<agent name="Multicast_Manager" class="mage.network.MulticastManager"
+				mode="now" version="1.0" type="net_manager" >
+			<arg name="protocol" value="Multicast" />
+			<arg name="GROUP" value="225.4.5.6" />
+			<arg name="PORT" value="4446" />
+			<arg name="MAX_BUF" value="4086" />
+		</agent>
+</agent_info>

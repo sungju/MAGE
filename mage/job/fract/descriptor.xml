@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<agent_info>
+        <!-- $[] for System.getProperty() entry -->
+        <!-- ${} for Internal envrionment variable -->
+
+		<!-- Default value of mode is "call" -->
+		<!-- Default value of version is "1.0" -->
+		<!-- Default value of type is "task" -->
+		<!-- type can be "task", "network", "query" -->
+						
+		<!-- Task agent -->
+		<agent name="FractalGenerateAgent" class="mage.job.fract.FractalGenerateAgent"
+				mode="now" version="1.0" >
+		</agent>
+						
+</agent_info>

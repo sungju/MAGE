@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<agent_info>
+        <!-- $[] for System.getProperty() entry -->
+        <!-- ${} for Internal envrionment variable -->
+
+		<!-- Default value of mode is "call" -->
+		<!-- Default value of version is "1.0" -->
+		<!-- Default value of type is "task" -->
+		<!-- type can be "task", "network", "query" -->
+						
+		<!-- Task agent -->
+		<agent name="WorkNodeAgent" class="mage.work.WorkNodeAgent"
+				mode="now" version="1.0" >
+			<arg name="ResourceManagerAddress" value="203.253.23.77" />
+			<arg name="ResourceManagerPort" value="5252" />
+		</agent>
+						
+		<!--
+		<agent name="serverAgent" class="mage.mon.ServerAgent" mode="call" >
+			<arg name="port" value="9292" />
+			<arg name="max_listener" value="10" />
+		</agent>
+		<agent name="serverBroker" class="mage.mon.ServerBroker" >
+			<arg name="ServerProxyList" value="127.0.0.1" />
+		</agent>
+		<agent name="serverProxy" class="mage.mon.ServerProxy" />
+		    		<
+		<!ent>
+		o>
+   

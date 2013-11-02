@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<mage_config>
+        <!-- $[] for System.getProperty() entry -->
+        <!-- ${} for Internal envrionment variable -->
+
+        <env_var name="MAGE_HOME" value="$[user.dir]"/>
+        <env_var name="AGENT_DIR" value="${MAGE_HOME}//client_agent"/>
+        <env_var name="TMP_DIR" value="${MAGE_HOME}//temp"/>
+</mage_config>

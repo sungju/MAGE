@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<agent_info>
+		<!-- Task agent -->
+		<agent name="SampleAgent" class="mage.agent.jobs.SampleAgent"
+				mode="now" version="1.0" >
+		</agent>
+</agent_info>

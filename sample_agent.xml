@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<agent_info>
+        <!-- $[] for System.getProperty() entry -->
+        <!-- ${} for Internal envrionment variable -->
+
+		<!-- Default value of mode is "call" -->
+		<!-- Default value of version is "1.0" -->
+		
+		<!-- Default value of type is "task" -->
+		<!-- type can be "task", "network", "query" -->
+
+		<!-- Query interpreter -->
+		<agent name="MyQuery" class="mage.lang.MyQuery"
+				mode="now" version="1.0" type="query" />
+		<agent name="HeartBeat" class="mage.lang.HeartBeat"
+				mode="now" version="1.0" type="query" />
+	
+		<!-- Network protocol -->
+		<agent name="LITH_Talk" class="mage.network.protocol.LITHTalk" 
+		       mode="call" version="1.0" type="network" />
+		<agent name="HTTP" class="mage.network.protocol.HTTP"
+				mode="call" version="1.0" type="network" />
+		<agent name="Multicast" class="mage.network.protocol.Multicast"
+				mode="call" version="1.0" type="network" />	
+		
+		<!-- Network Manager -->
+		<agent name="LITHTalk_Manager" class="mage.network.SocketManager"
+				mode="now" version="1.0" type="net_manager" />
+		<agent name="HTTP_Manager" class="mage.network.SocketManager"
+				mode="now" version="1.0" type="net_manager" />
+		<agent name="Multicast_Manager" class="mage.network.MulticastManager"
+				mode="now" version="1.0" type="net_manager" />
+						
+		<!-- Task agent -->
+        <agent name="CpuInfo" class="mage.mon.CPUInfo" mode="call" version="2.5" />
+        <agent name="doExec" class="mage.mon.DoExec" version="1.0" type="task" />
+		<agent name="MemInfo" class="mage.mon.MemInfo" mode="now" version="1.0" >
+			<arg name="Test" value="Sample" />
+			<arg name="Babo" value="Merong" />
+		</agent>
+		
+		<!--
+		<agent name="serverAgent" class="mage.mon.ServerAgent" mode="call" >
+			<arg name="port" value="9292" />
+			<arg name="max_listener" value="10" />
+		</agent>
+		<agent name="serverBroker" class="mage.mon.ServerBroker" >
+			<arg name="ServerProxyList" value="127.0.0.1" />
+		</agent>
+		<agent name="serverProxy" class="mage.mon.ServerProxy" />
+		-->
+				
+</agent_info>
